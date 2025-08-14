@@ -325,6 +325,16 @@ borders: top right bottom left !important; border-color: #2cccc4 !important; bor
     <style class="u-overlap-style">.u-overlap:not(.u-sticky-scroll) .u-header {
 transparency: 40 !important
 }</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Force update all countdowns regardless of visibility
+  document.querySelectorAll('.u-countdown').forEach(function(cd){
+    if (typeof window.nicepage_countdown === "function") {
+      window.nicepage_countdown(cd);
+    }
+  });
+});
+</script>
     
     
     
